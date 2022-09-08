@@ -9,3 +9,15 @@ body,html{
 #Apresentacao{
     background-color:#C21010;
 }
+
+a:link{
+    color:blueviolet
+}
+
+a:visited{
+    color:coral
+}
+
+a:hover{
+    color:aquamarine
+}
