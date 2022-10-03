@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <div>
+                <label>Nome*     </label>
+                <input type="text" name="nome" id="nome" placeholder="Insira seu nome " required>
+            </div>
+            <div>
+                <label>Sobrenome*</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Insira seu sobrenome" required>
+            </div>
+            <div>
+                <label>Telefone*</label>
+                <input type="number" name="telefone" id="telefone" placeholder="(99)99999-9999" required>
+            </div>
+            
+             <div>
+            <label>Email*</label>
+            <input type="email" name="email" id="email" placeholder="Insira seu e-mail" required>
+        </div>
+        
+        <div>
+            <br>
+            <label>Mensagem*</label>
+            <textarea row="6" style="width:40em" id="mensagem" name="mensagem" placeholder="Insira o que deseja" required></textarea>
+        </div>
+
+        <div>
+            <label>Protótipo (Requisitos)</label>
+            <input type="file" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg, application/pdf, application/doc, apllication/docx"  multiple />
+        </div>
+    
+        <div>
+            <label>As linguagens que você prefere</label>
+            <select id="ling_prog" multiple="multiple">
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>PHP</option>
+            </select> 
+            (Para fazer várias escolhas, mantenha a tecla CTRL pressionada)
+        </div>
+        
+        <div>
+            <label>Banco de Dados</label>
+            <label>
+                <input type="radio" name="linguagem" value="mysql">MySQL
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem" value="postresql">Postgresql
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem" value="mongodb">MongoDB
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem" value="n/a">N/A
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem" value="outra">Outra
+            </label>
+        </div>
+        
+        <div>
+            <label>Turno para Reuniões*</label>
+            <label>
+                <input type="radio" name="turno" id="manha" required>Manhã
+            </label>
+
+            <label >
+                <input type="radio" name="turno" id="tarde" required>Tarde
+            </label>
+
+            <label >
+                <input type="radio" name="turno" id="noite" required>Noite
+            </label>
+        </div>
+
+        <div>
+            <label>Horário Sugerido</label>
+            <input type="time" name="usr_horario">
+        </div>
+
+        <div>
+            <label>Data Prevista Entrega*<label>
+            <input type="date" name="prev_">
+        </div>
+        
+            <div>
+                <input type="submit" value="Enviar">          
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
