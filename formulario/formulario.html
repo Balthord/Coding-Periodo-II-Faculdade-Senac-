@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <form class="formulario" methord="post">
+        <fieldset><legend>Formulário de Freelancer</legend>
+            <div class="field">
+                <label>Nome</label><span class="aster">*</span>
+                <input type="text" name="nome" id="nome" class="centro" placeholder="Insira seu nome " required>
+            </div>
+            <div class="field">
+                <label>Sobrenome</label><span class="aster">*</span>
+                <input type="text" name="sobrenome" id="sobrenome" class="centro" placeholder="Insira seu sobrenome" required>
+            </div>
+            <div class="field">
+                <label>Telefone</label><span class="aster">*</span>
+                <input type="text" name="telefone" id="telefone" class="centro" placeholder="(99)99999-9999" required>
+            </div>
+            
+            <div class="field">
+            <label>Email</label><span class="aster">*</span>
+            <input type="email" name="email" id="email" class="centro" placeholder="Insira seu e-mail" required>
+        </div>
+            
+        <div>
+            <label>Língua</label>
+            <select id="lingua">
+                <option>Português(pt-br)</option>
+                <option>Inglês</option>
+                <option>Espanhol</option>
+                <option>Francês</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Protótipo (Requisitos)</label>
+            <input type="file" name="arquivos" class="btn btn-success, centro"  accept="image/png, image/jpeg, application/pdf, application/doc, apllication/docx"  multiple />
+        </div>
+    
+        <div class="field">
+            <label>As linguagens que você prefere</label>
+            <select id="ling_prog" class="centro" multiple="multiple">
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>PHP</option>
+            </select> 
+            (Para fazer várias escolhas, mantenha a tecla CTRL pressionada)
+        </div>
+        
+        <div class="field">
+            <label>Banco de Dados</label>
+            <label>
+                <input type="radio" name="linguagem"  value="mysql">MySQL
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem"  value="postresql">Postgresql
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem"  value="mongodb">MongoDB
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem"  value="n/a">N/A
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="linguagem"  value="outra">Outra
+            </label>
+        </div>
+        
+        <div class="field">
+            <label>Turno para Reuniões</label><span class="aster">*</span>
+            <label>
+                <input type="radio" name="turno" id="manha" required>Manhã
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="turno" id="tarde" required>Tarde
+            </label>
+            <b>|</b>
+            <label >
+                <input type="radio" name="turno" id="noite" required>Noite
+            </label>
+        </div>
+
+        <div class="field">
+            <label>Horário Sugerido</label>
+            <input type="time" name="usr_horario">
+        </div>
+
+        <div class="field">
+            <label>Data Prevista Entrega<label><span class="aster">*</span>
+            <input type="date" name="prev_">
+        </div>
+        
+        <div class="field">
+            <br>
+            <label>Mensagem</label><span class="aster">*</span>
+            <textarea row="6" style="width:40em" id="mensagem" class="centro" name="mensagem" placeholder="Insira o que deseja" required></textarea>
+        </div>
+
+            <div>
+                <input type="submit" value="Enviar">          
+                <input type="reset" value="Limpar">
+            </div>
+            <footer id="footer" style='text-align:right' class="field">
+                <p>
+                    <span style="color:blue;">*</span>Campo Obrigatório
+                </p>
+            </footer>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
