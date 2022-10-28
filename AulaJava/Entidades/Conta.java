@@ -1,4 +1,4 @@
-package AulaJAVA.Entidades;
+package AulaJava.Entidades;
 
 public class Conta {
     private int numero;
@@ -18,6 +18,38 @@ public class Conta {
         this.saldo = saldo;
         this.limite = limite;
         this.status = true;
+    }
+
+    public boolean sacar(double valor) {
+        if (this.saldo + this.limite >= valor) {
+            this.saldo -= valor;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean transferir(double valor, Conta contaFav) {
+        if(contaFav != null){
+            if (this.saldo + this.limite >= valor) {
+                this.saldo -=  valor;
+                contaFav.saldo += valor;
+                return true;
+            } else {
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 
     public int getNumero() {
@@ -56,4 +88,7 @@ public class Conta {
         this.status = status;
     }
 
+    public String toString(){
+        return "Conta de número: " + this.numero + " | " + this.cliente.toString();
+    }
 }

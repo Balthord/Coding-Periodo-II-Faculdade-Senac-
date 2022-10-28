@@ -1,4 +1,4 @@
-package AulaJAVA.Entidades;
+package AulaJava.Entidades;
 
 import java.util.Date;
 
@@ -59,6 +59,18 @@ public class Cliente {
 
     public Date getDataNasc() {
         return dataNasc;
-    }   
-    
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public String toString(){
+        return "Cliente: " + this.nome + "| CPF: " + this.cpf;
+    }
+
 }
