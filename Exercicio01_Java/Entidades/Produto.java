@@ -5,8 +5,6 @@ public class Produto {
     private String nome;
     private float valor;
     private Fornecedor fornecedor;
-    
-    
     public Produto() {
     }
 
