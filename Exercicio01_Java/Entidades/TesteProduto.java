@@ -21,4 +21,32 @@ public class TesteProduto {
        Produto produto3 = new Produto
        (3,"impressora",232, forn2);
     }
+    //Produto com o mesmo codigo 
+        //Produto produto5 = new Produto(3, "Monitor", (float) 3000.00, forn2);
+
+        ConjuntoProdutos conjuntoProdutos = new ConjuntoProdutos();  
+
+        //Adicionar produtos
+         conjuntoProdutos.adicionarProdutos(produto1);
+         conjuntoProdutos.adicionarProdutos(produto2);
+         conjuntoProdutos.adicionarProdutos(produto3);
+         conjuntoProdutos.adicionarProdutos(produto4);
+ 
+         
+         //Remover produto
+         //conjuntoProdutos.removerProdutos(1);
+ 
+         //Atualizar o nome
+         //conjuntoProdutos.atualizarNome(2, "Teclado");
+ 
+         //Atualizar o valor 
+         //conjuntoProdutos.atualizarPreco(1, (float) 230.00);
+ 
+         //Atualizar o valor do produto de acordo com uma porcentagem
+         //conjuntoProdutos.atualizarPrecoPorcentagem(1, (float)10.0);
+ 
+         //Mostrar os produtos
+         conjuntoProdutos.mostrarProdutos();
+     }
+
 }  
