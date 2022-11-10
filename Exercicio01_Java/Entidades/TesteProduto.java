@@ -4,6 +4,8 @@ import Entidades.Fornecedor;
 public class TesteProduto {
     
     public static void main(String[] args){
+        System.out.println();
+
         Fornecedor forn1 = new Fornecedor
         ("1234321","978787887","Zé Maria");
         

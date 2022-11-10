@@ -5,6 +5,7 @@ public class Produto {
     private String nome;
     private float valor;
     private Fornecedor fornecedor;
+
     public Produto() {
     }
 
@@ -16,14 +17,8 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
 
-    public boolean atualizarPreco (float valorPor, float acrescimo){
-        acrescimo = valorPor/100;
-        if (valorPor > 0){   
-            valorPor += (valorPor*acrescimo);
-            return true;
-        } else{
-            return false;
-        }
+    public void atualizaPreco(float porcentagem){
+        this.valor = this.valor + (this.valor * (porcentagem/100));
         
     }
 
