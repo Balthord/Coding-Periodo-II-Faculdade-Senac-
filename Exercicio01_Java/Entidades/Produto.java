@@ -17,9 +17,14 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
 
-    public void atualizaPreco(float porcentagem){
-        this.valor = this.valor + (this.valor * (porcentagem/100));
-        
+    public Float atualizaPreco(Float porcentagem){
+        if(porcentagem == 0 ){
+            System.out.println("Porcentagem Invalida");
+        } else{
+            this.valor = this.valor * ((porcentagem/100)+1);  
+        }   
+
+        return this.valor;
     }
 
 
@@ -62,8 +67,10 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
     
-
-}
+    @Override
+    public String toString() {
+        return "Produto [codigo=" + codigo + ", nome=" + nome + ", valor=" + valor + ", fornecedor=" + fornecedor + "]";
+    }
     
-
+}
     
