@@ -1,26 +1,29 @@
 package Exercicio02_Java;
 
-public class Mulher extends PessoaIMC{
+public class Mulher extends PessoaIMC {
+
+    public Mulher(String nome, String dataNascimento, double peso, double altura) {
+        super(nome, dataNascimento, peso, altura);
+        
+    }
+
     @Override
-    public String reusultIMC() {
-        return avaliar(null) ;
-    }
-    
-    public Mulher(String nome, String dataNascimento, double altura, double peso){
-        super(nome, dataNascimento, altura, peso);
-    }
+    public String resulIMC() {
+        
+        double resultMulher = this.calculaIMC(peso, altura);
 
-    public String avaliar(Mulher mulher) {
-        double imc = calculaIMC(mulher);
-        if (imc > 25.8) {
-            return "Acima do peso ideal";
-        }
-        if (imc > 19) {
-            return "Peso ideal";
-        }
-        return "Abaixo do peso ideal";
-    }
+        String AbaixoPeso = "Abaixo do peso ideal";
+        String PesoIdeal = "Peso ideal";
+        String PesoAlto = "Acima do Peso Ideal";
 
+        if(resultMulher < 19){
+            return AbaixoPeso;
+        } else if(resultMulher > 19 & resultMulher < 25.8){
+            return PesoIdeal;
+        } else{
+            return PesoAlto;
+        }
+    }
     
 }
 

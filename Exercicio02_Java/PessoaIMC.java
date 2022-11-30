@@ -2,35 +2,55 @@ package Exercicio02_Java;
 
 
 public abstract class PessoaIMC extends Pessoa{
-        protected double altura;
-        protected double peso;
+    protected double peso;
+    protected double altura;
 
-    public PessoaIMC(String nome, String dataNascimento, double altura, double peso) {
+    
+
+    public PessoaIMC(String nome, String dataNascimento, double peso, double altura) {
         super(nome, dataNascimento);
+        this.peso = peso;
         this.altura = altura;
+    }
+
+
+
+    public double getPeso() {
+        return peso;
+    }
+
+
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
-  public double getPeso() {
-        return peso;
+
+
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
+
+
 
     public double getAltura() {
         return altura;
     }
 
-    public double calculaIMC(PessoaIMC pessoa) {
-        double peso = pessoa.getPeso();
-        double altura = pessoa.getAltura();
-        return peso / (altura * altura);
-    }
-   
-    public abstract String reusultIMC();
+    public double calculaIMC(double peso, double altura){
+        double resultImc = peso/(altura*altura); 
 
-    public String toString() {
-        return "Nome: " +nome+ 
-                "\nData de Nascimento:" +dataNascimento+
-                "\nPeso: "+peso+
-                "\nAltura: " +altura ;  
+        return resultImc;
     }
+
+
+    public abstract String resulIMC();
+
+
+    @Override
+    public String toString() {
+        return "\nNome: " +  this.getNome() +"\nData de Nascimento: " + this.getDataNascimento() + "\nPeso: " + this.getPeso()+"Kg" + "\nAltura: " + this.getAltura() +"\nResultado: "+ this.resulIMC();
+    }
+    
+    
+    
 }

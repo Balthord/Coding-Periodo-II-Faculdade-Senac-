@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "Exercicio02_Java.Principal",
+            "projectName": "Coding-Periodo-II-Faculdade-Senac-_6fe5cd98"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
